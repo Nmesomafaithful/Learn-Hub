@@ -17,6 +17,8 @@ import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import CoursePlayer from "./pages/CoursePlayer";
 import NotFound from "./pages/NotFound";
+import Header from "@/components/Header";
+import SettingsPage from "@/pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <Header />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/courses" element={<Courses />} />
@@ -37,6 +40,7 @@ const App = () => (
             <Route path="/blog" element={<Blog />} />
             <Route path="/login" element={<Login />} />
             <Route path="/join" element={<Join />} />
+            <Route path="/settings" element={<SettingsPage />} />
             <Route 
               path="/dashboard" 
               element={
